@@ -1,0 +1,14 @@
+# Logs and Backups
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+# node_modules
+node_modules
+bower_components
+
+# Vim swap file (for those who use vim)
+*.swp
+*.swo
