@@ -1,0 +1,9 @@
+html, head, body {
+  margin: 0;
+  padding: 0
+}
+
+.box {
+  padding: 8px 12px;
+  background-color: lightblue
+}

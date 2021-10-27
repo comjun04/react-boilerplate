@@ -1,8 +1,10 @@
 import React from 'react'
 
+import './style.css'
+
 const App = () => {
   return (
-    <div>
+    <div class="box">
       <h3>Hello world</h3>
       <p>Edit <code>src/App.jsx</code> and save to reload.</p>
     </div>
