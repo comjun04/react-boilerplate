@@ -5,7 +5,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js',
+    filename: '[name].[contenthash].js',
+    clean: true
   },
   resolve: {
     modules: [
@@ -20,6 +21,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      title: 'react-boilerplate'
     })
   ],
   module: {
@@ -45,5 +47,16 @@ module.exports = {
         ],
       },
     ],
+  },
+  optimization: {
+    splitChunks: {
+      cacheGroups: {
+        vendor: {
+          name: 'vendor',
+          chunks: 'all',
+          test: /[\\/]node_modules[\\/]/
+        }
+      }
+    }
   }
 }
