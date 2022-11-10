@@ -21,7 +21,7 @@ module.exports = {
     new MiniCssExtractPlugin(),
     new HtmlWebpackPlugin({
       template: './src/index.html',
-      title: 'react-boilerplate'
+      title: 'Rename the title in `webpack.config.js`'
     })
   ],
   module: {
